@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(BG.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    border: 2px solid rgb(0, 110, 255);
+    max-width: 500px;
+    background:rgba(0, 0, 0, 0.34);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 3px rgba(0, 68, 255, 0.493);
+    font-family: sans-serif;
+    padding: 60px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 15px;
+}
+
+.Temperature-icon{
+    font-size: 45px;
+    color: #fff;
+}
+
+h1, h2{
+    color: #fff;
+    letter-spacing: 1.2px;
+    font-size: 50px;
+}
+
+#celsius, #fahrenheit, #kelvin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+input{
+    flex: 5;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color:rgba(0, 0, 0, 0.4);
+    border: solid 1px white;
+    border-radius: 8px 0 0 8px;
+    padding: 0 10px;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.253);
+    color: white;
+}
+
+input::placeholder{
+    font-size: large;
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.icon{
+    flex: 1;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 35px;
+    background: #0084ff;
+    color: #fff;
+    border: 1px solid rgb(0, 225, 255);
+    border-radius: 0 10px 10px 0;
+}
+
+.dropdown-container {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown-container select {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: solid 1px white;
+    border-radius: 8px;
+    padding: 0 10px;
+    box-shadow: 2px 2px 2px 2px rgba(33, 30, 30, 0.253);
+    appearance: none;
+    cursor: pointer;
+}
+
+.dropdown-container select:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 132, 255, 0.8);
+}
+
+.dropdown-arrow {
+    position: absolute;
+    right: 20px;
+    font-size: 18px;
+    color: white;
+    pointer-events: none;
+}
+
+.button{
+    margin-top: 70px;
+    text-align: center;
+}
+
+.button button{
+    border: none;
+    outline: none;
+    width: 180px;
+    height:40px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #ffffff;
+    background: black;
+    border: 3px solid rgb(0, 132, 255);
+    box-shadow: 5px 5px 5px rgba(0, 140, 255, 0.404);
+}
+
+.button button:hover{
+    background-color: rgba(255, 255, 255,0.55);
+    border: 3px solid rgb(6, 6, 6);
+    color: rgb(16, 17, 18);
+    box-shadow: none;
+    width: 185px;
+    height: 45px;
+}
+
+@media (max-width: 450px){
+    .container{
+        min-height: 50vh;
+        min-width: 45vh;
+    }
+
+    body{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+/* Result message styling */
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(0, 132, 255, 0.2);
+    border: 1px solid #00aaff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 132, 255, 0.3);
+}
+
+/* Responsive tweaks */
+@media (max-width: 450px) {
+    .container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 35px;
+    }
+
+    input, .dropdown-container select {
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .icon {
+        font-size: 25px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .button button {
+        width: 150px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    #result {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+

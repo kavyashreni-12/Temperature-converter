@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Temperature Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" referrer"title">
+
+    <div class="container">
+    <div class="title">
+        <h1>Converter</h1><br><h2>Temperature</h2>
+        <span class="Temperature-icon"><i class="fa-solid fa-temperature-three-quarters"></i></span>
+    </div>
+
+    <div class="dropdown-container">
+            <select id="city">
+                <option value="">-- Select City --</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Pune">Pune</option>
+                <option value="Lucknow">Lucknow</option>
+            </select>
+            <span class="dropdown-arrow">▼</span>
+        </div>
+
+    <div id="celsius">
+        <input type="number" placeholder="Celsius">
+        <span class="icon">℃</span>
+    </div>
+    <div id="fahrenheit">
+        <input type="number" placeholder="Fahrenheit">
+        <span class="icon">℉</span>
+    </div>
+    <div id="kelvin">
+        <input type="number" placeholder="Kelvin">
+        <span class="icon">K</span>
+    </div>
+
+    <div id="result">Please select a city first.</div>
+
+    <div class="button">
+        <button>Clear Fields</button>
+    </div>
+</div>
+
+    <script src="script.js" async defer></script>
+</body>
+</html>
